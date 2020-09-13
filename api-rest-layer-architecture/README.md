@@ -53,14 +53,6 @@ curl -X POST \
 
 ```
 
-- [x] Build 5 RESTful api points where a Users can send each part of their personal information. They need to pass token and data in the body of the request. You need store this information some where.
-
-CPF -> String
-Full Name -> String
-Birthday -> String
-Phone Number -> Number
-Address (CEP, street, number, complement, city, state) -> String and Number
-
 endpoints:
 
 ```bash
@@ -84,22 +76,6 @@ header: Authorization: token
 ```
 
 ```bash
-verb PUT: http://localhost:3000/api/v1/birthday
-header: Authorization: token
-{
-    "birthday": "09/09/1994"
-}
-```
-
-```bash
-PUT : http://localhost:3000/api/v1/phone-number
-header: Authorization: token
-{
-    "phoneNumber": "048 991496580"
-}
-```
-
-```bash
 PUT:http://localhost:3000/api/v1/address
 header: Authorization: token
 {
@@ -111,22 +87,6 @@ header: Authorization: token
 }
 
 ```
-
-```bash
-PUT : http://localhost:3000/api/v1/ammount
-header: Authorization: token
-
-{
-    "amount": 23.0
-}
-```
-
-- [x] Add a verification step for CPF, verify it is valid CPF number.
-- [x] Add a verification step for the CEP.
-- [x] Add a new end-point -> Amount Requested, will received data in cents.
-
-- [x] The order of the end-points must be maintained and checked, to achieve this, create a place where you can save the order of the end-points. Such that CPF -> Full Name -> Birthday -> Phone Number -> Address -> Amount Requested order must be enforce.
-- [] If a request is made out of order, it must return message informing an error. If the request is valid with the correct order, it must inform which is the next end-point the User has to request to
 
 ## Code Structure Design (Architecture layer)
 
