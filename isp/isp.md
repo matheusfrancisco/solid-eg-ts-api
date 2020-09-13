@@ -1,0 +1,3 @@
+# Inteface segragation principles
+
+Clientes não devem ser forçados a implementar metodos que eles não usam...
